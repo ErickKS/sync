@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Erick Kuwahara">
+    <title>Sync</title>
+
+    <!-- LOGO ICON -->
+    <link rel="icon" href="./images/favicon.png">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/6f3103b13c.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link href="./slick/slick.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- PRE-LOADER -->
+    <div id="layer">
+        <div class="dots"></div>
+    </div>
+
+    <!-- ARROW -->
+    <button id="arrowUp">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+
+    <!-- HEADER -->
+    <header id="home">
+        <nav id="nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="./"><img src="./images/logo.svg" alt="logo image"></a>
+                </div>
+                <div id="navigation">
+                    <button id="btn-mobile">
+                        <span id="hamburger"></span>
+                    </button>
+                    <ul class="menu">
+                        <li><a class="navLink" href="#description">Description</a></li>
+                        <li><a class="navLink" href="#features">Features</a></li>
+                        <li><a class="navLink" href="#screens">Screens</a></li>
+
+                        <!-- dropdown -->
+                        <li>
+                            <a id="dropA">Extra <i class="fa-solid fa-sort-down"></i></a>
+                            <ul id="dropUl">
+                                <li><a href="./pages/articles-details.html">Article details</a></li>
+                                <li><a href="./pages/terms-conditions.html">Term conditions</a></li>
+                                <li><a href="./pages/privacy-policy.html">Privacy Policy</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a class="navLink" href="#download">Download</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="banner">
+            <div class="banner__svg">
+                <div class="svg__single">
+                    <img src="./images/decorative-white-circle.svg" alt="svg">
+                </div>
+                <div class="svg__single">
+                    <img src="./images/decorative-white-circle.svg" alt="svg">
+                </div>
+                <div class="svg__single">
+                    <img src="./images/decorative-blue-circle.svg" alt="svg">
+                </div>
+                <div class="svg__single">
+                    <img src="./images/decorative-yellow-circle.svg" alt="svg">
+                </div>
+                <div class="svg__single">
+                    <img src="./images/decorative-green-diamond.svg" alt="svg">
+                </div>
+            </div>
+            <div class="container">
+                <h1>Mobile App Landing Page</h1>
+                <p>Start focusing on your goals and get more things done with Sync mobile application. It's the first
+                    app to harness the power of social connections to help you stay focused and get organized</p>
+                <a href="./"><i class="fa-brands fa-apple"></i> Download</a>
+                <a href="./"><i class="fa-brands fa-google-play"></i> Download</a>
+
+                <div class="banner__img">
+                    <img src="./images/banner.png" alt="banner image">
+                </div>
+            </div>
+        </section>
+
+        <section class="icons">
+            <div class="container">
+                <div class="icons__single">
+                    <i class="fa-solid fa-users purple"></i>
+                    <div class="icons__txt">
+                        <p>Identify goals</p>
+                    </div>
+                </div>
+                <div class="icons__single">
+                    <i class="fa-solid fa-code green"></i>
+                    <div class="icons__txt">
+                        <p>Situation analysis</p>
+                    </div>
+                </div>
+                <div class="icons__single">
+                    <i class="fa-solid fa-gear red"></i>
+                    <div class="icons__txt">
+                        <p>Task settings</p>
+                    </div>
+                </div>
+                <div class="icons__single">
+                    <i class="fa-solid fa-comments yellow"></i>
+                    <div class="icons__txt">
+                        <p>Social interaction</p>
+                    </div>
+                </div>
+                <div class="icons__single">
+                    <i class="fa-solid fa-rocket blue"></i>
+                    <div class="icons__txt">
+                        <p>Get thing done</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- DESCRIPTION -->
+    <section id="description">
+        <div class="description__1">
+            <div class="container">
+                <div class="description__1__img">
+                    <img src="./images/description-1.png" alt="illustrative image">
+                </div>
+
+                <div class="description__1__txt">
+                    <h2>Organize Your Time And Start Getting Results</h2>
+                    <p>Sync is the first mobile app on the market to harness the power of social connections to help you
+                        stop procrastinating and start getting things done. Give it a try and see the changes right away
+                    </p>
+                    <ul>
+                        <li><i class="fa-solid fa-square"></i>
+                            <p>Analyze and evaluate your current status and productivity</p>
+                        </li>
+                        <li><i class="fa-solid fa-square"></i>
+                            <p>Begin monitoring your day to day routine with Sync app</p>
+                        </li>
+                        <li><i class="fa-solid fa-square"></i>
+                            <p>See the improved results in no more than a couple of weeks</p>
+                        </li>
+                    </ul>
+                    <button onclick="activeLightbox()">Lightbox</button>
+
+                    <div id="lightbox__layer"></div>
+                    <div id="lightbox">
+                        <button onclick="closeLightbox()" class="lightbox__closeX">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <div class="lightbox__img">
+                            <img src="./images/description-1-lightbox.jpg" alt="illustrative image">
+                        </div>
+                        <div class="lightbox__txt">
+                            <h2>Goals Setting</h2>
+                            <div class="line"></div>
+                            <p>This is a great app which can help you save time and make your live easier. And it will
+                                help improve your productivity.</p>
+                            <h4>User Feedback</h4>
+                            <p>This is a great app which can help you save time and make your live easier. And it will
+                                help improve your productivity.</p>
+                            <ul>
+                                <li><i class="fa-regular fa-square-check"></i>
+                                    <p>Splash screen panel</p>
+                                </li>
+                                <li><i class="fa-regular fa-square-check"></i>
+                                    <p>Statistics graph report</p>
+                                </li>
+                                <li><i class="fa-regular fa-square-check"></i>
+                                    <p>Events calendar layout</p>
+                                </li>
+                                <li><i class="fa-regular fa-square-check"></i>
+                                    <p>Location details screen</p>
+                                </li>
+                                <li><i class="fa-regular fa-square-check"></i>
+                                    <p>Onboarding steps interface</p>
+                                </li>
+                            </ul>
+                            <a href="./">Download</a>
+                            <button onclick="closeLightbox()">Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="description__2">
+            <div class="container">
+                <div class="description__2__txt">
+                    <div class="description__2__painel">
+                        <div class="description__2__tittle">
+                            <button id="schedule" class="active" onclick="showSchedule()"><i
+                                    class="fa-solid fa-clock"></i> Schedule</button>
+                        </div>
+
+                        <div class="description__2__tittle">
+                            <button id="tracking" onclick="showTracking()"><i class="fa-solid fa-list"></i>
+                                Tracking</button>
+                        </div>
+
+                        <div class="description__2__tittle">
+                            <button id="organize" onclick="showOrganize()"><i class="fa-solid fa-calendar-days"></i>
+                                Organize</button>
+                        </div>
+                    </div>
+                    <div class="description__2__content">
+                        <div id="content__schedule" class="content__box active">
+                            <p><span>Schedule task</span> to keep track of their completion. Sync provides multiple
+                                scheduling options including alarms and reminders.</p>
+                            <ul>
+                                <li><i class="fa-regular fa-square-check"></i>
+                                    <p>You can always add new tasks or change the settings of existing ones in your
+                                        calendar view or the app control panel</p>
+                                </li>
+                                <li><i class="fa-regular fa-square-check"></i>
+                                    <p>It's easy to stay focused on your most important daily activities that will get
+                                        you closer to meeting your goals</p>
+                                </li>
+                                <li><i class="fa-regular fa-square-check"></i>
+                                    <p>Use phone reminders to free up your long term memory which will reduce stress and
+                                        make you more productive</p>
+                                </li>
+                            </ul>
+                            <a href="./pages/terms-conditions.html">Terms</a>
+                            <a class="btn-black" href="./pages/privacy-policy.html">Privacy</a>
+                        </div>
+
+                        <div id="content__tracking" class="content__box">
+                            <p><span>Keep track of everything</span> and analyse your progress while using the app. In
+                                less than a month you should be seeing improved results when it comes to time management
+                                and task prioritization</p>
+                            <p><span>Anyone can enjoy the app</span> no matter their gender, age, occupation or location
+                                in the world. Sync's algorithms have been built to be flexible and functional for any
+                                person in the world</p>
+                            <p><span>Achieve the impossible</span> just by carefully monitoring your progress and
+                                keeping the app updated with daily operations. It's easier than you think and it only
+                                takes a couple of minutes</p>
+                            <a href="./pages/terms-conditions.html">Term & Conditions >></a>
+                        </div>
+
+                        <div id="content__organize" class="content__box">
+                            <p><span>Use the power of social interactivity</span> to keep you motivated and focused on
+                                your daily and long term goals. It's revolutionary</p>
+                            <ul>
+                                <li><i class="fa-regular fa-square-check"></i>
+                                    <p>Commiting to something in front of a crowd gives you little room to walk back on
+                                        your promise and makes you push on</p>
+                                </li>
+                                <li><i class="fa-regular fa-square-check"></i>
+                                    <p>No more frustrations of loosing focus and not being efficient. Sync main purpose
+                                        is to solve just that and make you happy</p>
+                                </li>
+                                <li><i class="fa-regular fa-square-check"></i>
+                                    <p>It's the first mobile app that can turn you in a better organized person without
+                                        the pressure of failing like other systems</p>
+                                </li>
+                                <li><i class="fa-regular fa-square-check"></i>
+                                    <p>Recognized by a lot of trainers and life coaches Sync is the number one tool they
+                                        recommend time management</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="description__2__img">
+                    <img src="./images/description-2.png" alt="illustrative image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features">
+        <div class="container">
+            <h2>Special Features</h2>
+            <p>Sync's features are designed to help you improve your time management skills and become a better
+                organized person. Organize your tasks, schedule your appointments and meet your personal development
+                goals with Sync</p>
+            <div class="features__box">
+                <div class="features__content">
+                    <div class="features__single">
+                        <i class="fa-solid fa-users purple"></i>
+                        <div>
+                            <h4>Goal Setting</h4>
+                            <p>Like any self improving process, everything starts with setting your goals and committing
+                                to them</p>
+                        </div>
+                    </div>
+                    <div class="features__single">
+                        <i class="fa-solid fa-code green"></i>
+                        <div>
+                            <h4>Situation Analysis</h4>
+                            <p>Sync provides a well designed and ergonomic visual editor for you to edit your quick
+                                notes</p>
+                        </div>
+                    </div>
+                    <div class="features__single">
+                        <i class="fa-solid fa-gear red"></i>
+                        <div>
+                            <h4>Tasks Settings</h4>
+                            <p>Each option packaged in the app's menus is provided in order to improve you personally
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features__img">
+                    <img src="./images/features.jpg" alt="illustrative image">
+                </div>
+
+                <div class="features__content">
+                    <div class="features__single">
+                        <i class="fa-solid fa-comments yellow"></i>
+                        <div>
+                            <h4>Social Interaction</h4>
+                            <p>Schedule your appointments, meetings and periodical evaluations using the tools</p>
+                        </div>
+                    </div>
+                    <div class="features__single">
+                        <i class="fa-solid fa-rocket blue"></i>
+                        <div>
+                            <h4>Get Things Done</h4>
+                            <p>Reading focus mode for long form articles, ebooks and other materials with long text</p>
+                        </div>
+                    </div>
+                    <div class="features__single">
+                        <i class="fa-solid fa-download purple"></i>
+                        <div>
+                            <h4>Good Foundation</h4>
+                            <p>Get a solid foundation for your self development efforts. Try Sync mobile app for devices
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRINT SCREENS -->
+    <section id="screens">
+        <div class="container">
+            <div class="slider">
+                <div class="slider__single"><img src="./images/screenshot-1.jpg" alt="App screen 01"></div>
+                <div class="slider__single"><img src="./images/screenshot-2.jpg" alt="App screen 02"></div>
+                <div class="slider__single"><img src="./images/screenshot-3.jpg" alt="App screen 03"></div>
+                <div class="slider__single"><img src="./images/screenshot-4.jpg" alt="App screen 04"></div>
+                <div class="slider__single"><img src="./images/screenshot-5.jpg" alt="App screen 05"></div>
+                <div class="slider__single"><img src="./images/screenshot-6.jpg" alt="App screen 06"></div>
+                <div class="slider__single"><img src="./images/screenshot-7.jpg" alt="App screen 07"></div>
+                <div class="slider__single"><img src="./images/screenshot-8.jpg" alt="App screen 08"></div>
+                <div class="slider__single"><img src="./images/screenshot-9.jpg" alt="App screen 09"></div>
+                <div class="slider__single"><img src="./images/screenshot-10.jpg" alt="App screen 10"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>User Testimonials</h2>
+            <div class="testimonials__box">
+                <div class="testimonials__single">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="line"></div>
+                    <p>I love using Sync for my personal development needs. It meets all my requirements and it actually
+                        helps a lot with focusing skills.</p>
+                    <h4>Rick Jones - Designer</h4>
+                </div>
+
+                <div class="testimonials__single">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="line"></div>
+                    <p>After trying out a large number of personal coaching apps I decided to give Sync a try and what a
+                        wonderful surprise it was.</p>
+                    <h4>Lynda Marquez - Developer</h4>
+                </div>
+
+                <div class="testimonials__single">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="line"></div>
+                    <p>Never dreamed I could learn so fast how to focus on my personal goals and improve my life to
+                        levels I never thought possible.</p>
+                    <h4>Jay Frisco - Marketer</h4>
+                </div>
+            </div>
+
+            <div class="customer">
+                <div class="companies__single"><img src="./images/customer-logo-1.png" alt="customer logo"></div>
+                <div class="companies__single"><img src="./images/customer-logo-2.png" alt="customer logo"></div>
+                <div class="companies__single"><img src="./images/customer-logo-3.png" alt="customer logo"></div>
+                <div class="companies__single"><img src="./images/customer-logo-4.png" alt="customer logo"></div>
+                <div class="companies__single"><img src="./images/customer-logo-5.png" alt="customer logo"></div>
+            </div>
+
+            <div class="testimonials__box">
+                <div class="testimonials__single">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="line"></div>
+                    <p>I got so much value from using Sync in my daily life for which I am very grateful and would
+                        recommend it to everybody</p>
+                    <h4>Frank Gibson - Manager</h4>
+                </div>
+
+                <div class="testimonials__single">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="line"></div>
+                    <p>If you have great goals but can't figure out a way to keep focused then you should definitely
+                        give Sync a try and see the results</p>
+                    <h4>Rita Longmile - Designer</h4>
+                </div>
+
+                <div class="testimonials__single">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="line"></div>
+                    <p>I've been looking for a great organizer app for such a long time but now I am really happy that I
+                        found Sync. It's beeen working great</p>
+                    <h4>Jones Smith - Developer</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDICATORS -->
+    <section id="indicators">
+        <div class="container">
+            <div class="indicators__box">
+                <div class="indicators__single">
+                    <i class="fa-solid fa-users purple"></i>
+                    <div class="numbers">231</div>
+                    <p>Happy Users</p>
+                </div>
+                <div class="indicators__single">
+                    <i class="fa-solid fa-code green"></i>
+                    <div class="numbers">385</div>
+                    <p>Issues Solved</p>
+                </div>
+                <div class="indicators__single">
+                    <i class="fa-solid fa-gear red"></i>
+                    <div class="numbers">159</div>
+                    <p>Good Reviews</p>
+                </div>
+                <div class="indicators__single">
+                    <i class="fa-solid fa-comments yellow"></i>
+                    <div class="numbers">127</div>
+                    <p>Case Studies</p>
+                </div>
+                <div class="indicators__single">
+                    <i class="fa-solid fa-rocket blue"></i>
+                    <div class="numbers">211</div>
+                    <p>Orders Received</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD -->
+    <section id="download">
+        <div class="download__svg">
+            <div class="svg__single">
+                <img src="./images/decorative-white-circle.svg" alt="svg">
+            </div>
+            <div class="svg__single">
+                <img src="./images/decorative-white-circle.svg" alt="svg">
+            </div>
+            <div class="svg__single">
+                <img src="./images/decorative-blue-circle.svg" alt="svg">
+            </div>
+            <div class="svg__single">
+                <img src="./images/decorative-yellow-circle.svg" alt="svg">
+            </div>
+            <div class="svg__single">
+                <img src="./images/decorative-green-diamond.svg" alt="svg">
+            </div>
+        </div>
+        <div class="container">
+            <div class="download__img">
+                <img src="./images/download.png" alt="illustrative image">
+            </div>
+            <p>Do you feel like you're wasting time with small stuff instead of working towards your goals? Start using
+                Sync to organize your time and get a grip on your personal development</p>
+            <a href="./"><i class="fa-brands fa-apple"></i> Download</a>
+            <a href="./"><i class="fa-brands fa-google-play"></i> Download</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer__box">
+                <div class="footer__single">
+                    <h4>About Sync</h4>
+                    <p>Sync is a landing page HTML template built with Bootstrap 4 for presenting mobile apps</p>
+                </div>
+                <div class="footer__single">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 22 Innovative Street, CA, US</p>
+                    <a href="./"><i class="fa-solid fa-envelope"></i>office@syncmobile.com</a>
+                    <p><i class="fa-solid fa-phone"></i>+44 376 945 23</p>
+                </div>
+                <div class="footer__single">
+                    <h4>Value Links</h4>
+                    <a href="./pages/terms-conditions.html">Terms & Conditions</a>
+                    <a href="./pages/privacy-policy.html">Privacy Policy</a>
+                    <a href="./pages/articles-details.html">Article Details</a>
+                </div>
+                <div class="footer__single">
+                    <h4>Other Apps</h4>
+                    <a href="./">Scientific Calculator</a>
+                    <a href="./">Advanced Timer</a>
+                    <a href="./">Music Store</a>
+                </div>
+            </div>
+            <div class="footer__medias">
+                <a href="./"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="./"><i class="fa-brands fa-twitter"></i></a>
+                <a href="./"><i class="fa-brands fa-pinterest-p"></i></a>
+                <a href="./"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <p>Copyright © 2045 Inovatik - All rights reserved</p>
+                <p>Developed by Erick Kuwahara</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="./slick/slick.min.js" type="text/javascript"></script>
+    <script src="./js/script.js" type="text/javascript"></script>
+</body>
+
+</html>
