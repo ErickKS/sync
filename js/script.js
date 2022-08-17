@@ -34,9 +34,6 @@ function toggleMenu(event) {
                 dropBtn.classList.remove('active');
                 dropList.classList.remove('active');
                 nav.classList.remove('active');
-            }else {
-                dropBtn.classList.toggle('active');
-                dropList.classList.toggle('active');
             }
         }
     }
@@ -45,6 +42,15 @@ function toggleMenu(event) {
 function dropdown() {
     dropBtn.classList.toggle('active');
     dropList.classList.toggle('active');
+    
+    if(window.screen.width > 990) {
+        document.documentElement.onclick = function(event){
+            if (event.target !== dropBtn && event.target !== dropList) {
+                dropBtn.classList.remove('active');
+                dropList.classList.remove('active');
+            }
+        }
+    }
 }
 
 btnMobile.addEventListener('click', toggleMenu)
