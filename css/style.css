@@ -696,6 +696,10 @@ nav .logo a img {
     background-color: var(--color-purple);
 }
 
+.description__2__tittle button i {
+    margin-right: .3rem;
+}
+
 .description__2__img {
     text-align: center;
 }
@@ -734,7 +738,7 @@ nav .logo a img {
     visibility: visible;
 }
 
-#content__schedule a {
+#schedule a {
     display: inline-block;
     text-align: center;
     width: 12rem;
@@ -747,27 +751,27 @@ nav .logo a img {
     color: var(--color-white);
     transition: .2s ease-in;
 }
-#content__schedule a:hover {
+#schedule a:hover {
     background-color: transparent;
     color: var(--color-primary);
 }
 
-#content__schedule a.btn-black {
+#schedule a.btn-black {
     background-color: transparent;
     border: .2rem solid var(--color-b-font);
     color: var(--color-b-font);
 }
 
-#content__schedule a.btn-black:hover {
+#schedule a.btn-black:hover {
     background-color: var(--color-b-font);
     color: var(--color-white);
 }
 
-#content__tracking p {
+#tracking p {
     margin-block: 1rem;
 }
 
-#content__tracking a {
+#tracking a {
     font-size: 1.6rem;
     font-weight: 400;
     text-decoration: underline;

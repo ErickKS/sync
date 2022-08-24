@@ -159,49 +159,26 @@ function closeLightbox() {
 
 // DESCRIPTION ANIMATION 
 
-const btnSchedule = document.getElementById('schedule')
-const btnTracking = document.getElementById('tracking')
-const btnOrganize = document.getElementById('organize')
+const descriptionContainer = document.querySelector('.description__2__txt');
+const descriptionBtn = document.querySelectorAll('.description__2__tittle .description__2__btn');
+const descriptionContent = document.querySelectorAll('.content__box');
 
-const contentSchedule = document.getElementById('content__schedule')
-const contentTracking = document.getElementById('content__tracking')
-const contentOrganize = document.getElementById('content__organize')
+descriptionContainer.addEventListener('click', (e) => {
+    const descriptionId = e.target.dataset.id;
+    if(descriptionId) {
+        descriptionBtn.forEach((btn) => {
+            btn.classList.remove('active');
+            e.target.classList.add('active');
+        });
 
-function showSchedule() {
-    if (btnTracking.classList.contains('active') || btnOrganize.classList.contains('active')) {
-        btnTracking.classList.remove('active')
-        btnOrganize.classList.remove('active')
-        contentTracking.classList.remove('active')
-        contentOrganize.classList.remove('active')
+        descriptionContent.forEach((descriptionContent) => {
+            descriptionContent.classList.remove('active');
+        });
 
-        btnSchedule.classList.add('active')
-        contentSchedule.classList.add('active')
+        const element = document.getElementById(descriptionId);
+        element.classList.add('active');
     }
-}
-
-function showTracking() {
-    if (btnSchedule.classList.contains('active') || btnOrganize.classList.contains('active')) {
-        btnSchedule.classList.remove('active')
-        btnOrganize.classList.remove('active')
-        contentSchedule.classList.remove('active')
-        contentOrganize.classList.remove('active')
-
-        btnTracking.classList.add('active')
-        contentTracking.classList.add('active')
-    }
-}
-
-function showOrganize() {
-    if (btnSchedule.classList.contains('active') || btnTracking.classList.contains('active')) {
-        btnSchedule.classList.remove('active')
-        btnTracking.classList.remove('active')
-        contentSchedule.classList.remove('active')
-        contentTracking.classList.remove('active')
-
-        btnOrganize.classList.add('active')
-        contentOrganize.classList.add('active')
-    }
-}
+});
 
 // SLIDER SCREENS
 
