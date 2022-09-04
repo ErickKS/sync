@@ -1,13 +1,14 @@
-# [Sync](https://erickks.github.io/sync/)
-Elegant and responsive Website!
-##
+<div align="center">
+    <h2>⚜️ S Y N C ⚜️<br><a href="https://erickks.github.io/sync/">live demo</></h2>
+</div>
+  
+<br>
+ 
+### &nbsp; N O T E S
+* This project is entirely educational
+* I'm practicing my skills
+  
+<br>
 
-Attention!
-
-This project is entirely educational.
-I'm just practicing my skills :)
-
-Note: The original project uses BootStrap. "My project" is fully adapted for HTML, CSS and JS
-
-Template obtained in:
-https://www.free-css.com/free-css-templates/page274/sync
+### &nbsp; T E M P L A T E
+* [Free Css](https://www.free-css.com/free-css-templates/page274/sync)
